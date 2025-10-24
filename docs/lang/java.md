@@ -15,7 +15,7 @@ Java 类似 C/C++ 语言，需要一个函数（在面向对象中，这被称�
 Java 的主函数的格式是固定的，形如：
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         // 程序的代码
     }
@@ -32,15 +32,15 @@ class Test {
 
 |   类型名   |   意义  |
 | :-----: | :---: |
-| boolean |  布尔类型 |
-|   byte  |  字节类型 |
-|   char  |  字符型  |
-|  double | 双精度浮点 |
-|  float  | 单精度浮点 |
-|   int   |   整型  |
-|   long  |  长整型  |
-|  short  |  短整型  |
-|   null  |   空   |
+| `boolean` |  布尔类型 |
+|   `byte`  |  字节类型 |
+|   `char`  |  字符型  |
+|  `double` | 双精度浮点 |
+|  `float`  | 单精度浮点 |
+|   `int`   |   整型  |
+|   `long`  |  长整型  |
+|  `short`  |  短整型  |
+|   `void`  |   无类型   |
 
 ### 声明变量
 
@@ -63,7 +63,7 @@ final double PI = 3.1415926;
 
 ```java
 // 有十个元素的整数类型数组
-// 其语法格式为 数据类型[] 变量名 = new 数据类型[数组大小]
+// 其语法格式为 数据类型[] 变量名 = new 数据类型[数组大小];
 int[] ary = new int[10];
 ```
 
@@ -107,7 +107,7 @@ package org.oiwiki.tutorial;
 
 import java.util.Scanner;
 
-class Test {
+public class Test {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in); // System.in 是输入流
         int a = scan.nextInt();
@@ -129,7 +129,7 @@ class Test {
 | `%c` |  字符类型 |
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         int a = 12;
         char b = 'A';
@@ -149,10 +149,10 @@ Java 的流程控制语句与 C++ 是基本相同的。
 
 #### 选择
 
--   if
+-   `if`
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         if ( /* 判断条件 */ ){
             // 条件成立时执行这里面的代码
@@ -161,10 +161,10 @@ class Test {
 }
 ```
 
--   if...else
+-   `if...else`
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         if ( /* 判断条件 */ ) {
             // 条件成立时执行这里面的代码
@@ -175,10 +175,10 @@ class Test {
 }
 ```
 
--   if...else if...else
+-   `if...else if...else`
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         if ( /* 判断条件 */ ) {
             //判断条件成立执行这里面的代码
@@ -191,12 +191,12 @@ class Test {
 }
 ```
 
--   switch...case
+-   `switch...case`
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
-        switch ( /* 表达式 */ ){
+        switch ( /* 表达式 */ ) {
           case /* 值 1 */:
               // 当表达式取得的值符合值 1 执行此段代码
               break; // 如果不加上 break 语句,会让程序按顺序往下执行直到 break
@@ -212,12 +212,12 @@ class Test {
 
 #### 循环
 
--   for
+-   `for`
 
 `for` 关键字有两种使用方法，其中第一种是普通的 `for` 循环，形式如下：
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         for ( /* 初始化 */; /* 循环的判断条件 */; /* 每次循环后执行的步骤 */ ) {
             // 当循环的条件成立执行循环体内代码
@@ -238,10 +238,10 @@ class Test {
 }
 ```
 
--   while
+-   `while`
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         while ( /* 判定条件 */ ) {
             // 条件成立时执行循环体内代码
@@ -250,10 +250,10 @@ class Test {
 }
 ```
 
--   do...while
+-   `do...while`
 
 ```java
-class Test {
+public class Test {
     public static void main(String[] args) {
         do {
           // 需要执行的代码
@@ -266,14 +266,14 @@ class Test {
 
 ### 类名与文件名一致
 
-创建  Java 源程序需要类名和文件名一致才能编译通过，否则编译器会提示找不到类。通常该文件名会在具体 OJ 中指定。
+创建 Java 源程序需要类名和文件名一致才能编译通过，否则编译器会提示找不到类。通常该文件名会在具体 OJ 中指定。
 
 例：
 
 `Add.java`
 
 ```java
-class Add {
+public class Add {
     public static void main(String[] args) {
         // ...
     }
